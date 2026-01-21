@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daymark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style="min-height:100vh; position:relative; padding-bottom:80px;">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span class="tick">✔</span>
+      <span class="brand">Daymark</span>
+    </div>
+    <div class="icons">
+    <input type="date" id="calendar" />
+  </div>
+</div>
+
+  </header>
+
+  <!-- Date -->
+  <h2 id="dateText"></h2>
+
+  <!-- Quote -->
+  <p class="quote" id="quoteText"></p>
+
+  <!-- Task input -->
+  <div class="task-input">
+    <input type="text" id="taskInput" placeholder="Enter task..." />
+    <button id="addBtn">Add</button>
+  </div>
+
+  <!-- Task list -->
+  <ul id="taskList"></ul>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <button id="prevDay">Previous</button>
+    <button id="nextDay">Next</button>
+  </div>
+
+  <!-- Footer (FIXED AT BOTTOM) -->
+  <footer style="
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  ">
+    <p>Build your day, step by step.</p>
+    <p>Daymark © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

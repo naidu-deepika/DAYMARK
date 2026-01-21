@@ -1,0 +1,227 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fdffb6; /* default background */
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tick {
+  color: #38b000;
+  margin-right: 6px;
+}
+
+.brand {
+  color: #38b000;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icons input[type="date"] {
+  padding: 4px;
+  cursor: pointer;
+}
+
+/* Calendar highlighted when tasks exist */
+.has-tasks {
+  border: 2px solid #38b000;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+}
+
+/* ================= DATE & QUOTE ================= */
+#dateText {
+  margin-top: 30px;
+  font-size: 20px;
+  color: black;
+}
+
+.quote {
+  max-width: 520px;
+  margin: 10px auto 30px;
+  font-style: italic;
+  color: black;
+}
+
+/* ================= TASK INPUT ================= */
+.task-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-input input {
+  width: 260px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  color: black;
+  border-radius: 4px;
+}
+
+.task-input input::placeholder {
+  color: #555;
+}
+
+.task-input button {
+  background: #e8e8e4;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ================= TASK LIST ================= */
+#taskList {
+  list-style: none;
+  padding: 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+#taskList li {
+  background: white;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+
+
+/* Hide default checkbox */
+#taskList input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  position: relative;
+  background: white;
+}
+
+/* Custom checkbox box */
+#taskList input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #b0b0b0;   /* ⬅ grey border */
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  background: white;
+}
+
+/* Green tick */
+#taskList input[type="checkbox"]::after {
+  content: "✔";
+  position: absolute;
+  top: -4px;
+  left: 4px;
+  font-size: 22px;
+  color: #38b000;
+  display: none;
+}
+
+/* Show tick when checked */
+#taskList input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+
+
+/* Task text */
+#taskList span {
+  flex: 1;
+  text-align: left;
+  color: black;
+}
+
+/* Completed task */
+.completed {
+  color: #38b000;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+/* Delete button */
+#taskList button {
+  background: white;
+  border: 2px solid #b0b0b0;   /* ⬅ grey border */
+  color: red;
+  font-size: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ================= NAVIGATION ================= */
+.nav {
+  margin-top: 30px;
+}
+
+.nav button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#prevDay {
+  background: #caf0f8;
+}
+
+#nextDay {
+  background: #fff0f3;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin: 40px 0 20px;
+  color: black;
+}
+
+footer p {
+  margin: 4px 0;
+}
